@@ -1,3 +1,7 @@
+/************************
+**** 1.General Styles ***
+************************/
+
 html,
 body {
     margin: 0;
@@ -17,11 +21,10 @@ body {
     display: flex;
 }
 
-.cleafix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
+/************************
+***** 2. Aside part *****
+************************/
 
 #btn-arrow,
 #btn-bars,
@@ -31,9 +34,7 @@ body {
 }
 
 .aside-part {
-    /*max-width: 40vw;*/
     width: 40vw;
-    /*transition: width 1s;*/
     min-height: 100vh;
     background-color: #3B3E99;
     display: flex;
@@ -42,7 +43,6 @@ body {
 
 .aside-part__header {
     display: flex;
-    /*width: 100%;*/
     justify-content: space-between;
     align-items: center;
     height: 60px;
@@ -96,6 +96,70 @@ body {
     font-size: 2.6rem;    
 }
 
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part {
+    width: 124px;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part + .main-part {
+    width: calc(100vw - 14px);
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) 
++ .aside-part > .aside-part__users-info > 
+.user-info > .user-info__description {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__users-info > 
+.user-info > .user-info__last-time {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .search-user {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .btn-bars-label {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .btn-arrow-label {
+    transform: rotate(-225deg);
+    left: calc((60px - 20px)/2);
+    transition: all .3s;
+}
+
+
+#btn-bars:checked + .aside-part > .aside-part__users-info {
+    display: none;
+}
+
+#btn-bars:checked + .aside-part > .aside-part__header >
+ .btn-bars-label:after {
+    content: "\f00d";   
+    font-family: FontAwesome;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.6rem;
+    left: 0;
+}
+
+#btn-bars:checked + .aside-part > .aside-part__user-menu {
+    display: block;
+}
+
+#btn-arrow ~ #btn-bars:checked + .aside-part > 
+.aside-part__header > .btn-arrow-label{
+    cursor: default;
+    pointer-events: none;
+}
+
+
 .user-info {
     display: flex;
     padding: 0 32px;
@@ -111,13 +175,10 @@ body {
 
 .avatar__img {
     border-radius: 50%;
-    
 }
 
 .user-info__description {
     height: 38px;
-    /*margin-left: 32px;
-    margin-right: 54px;*/
     margin-left: -20px;;
 }
 
@@ -153,6 +214,7 @@ body {
 
 
 .aside-part__user-menu {
+    display: none;
     padding: 0 32px;
     margin-top: 32px;
     margin-bottom: 32px;
@@ -161,10 +223,6 @@ body {
 .user-menu {
     display: flex;
     flex-direction: column;
-}
-
-.user-menu__item {
-    
 }
 
 .btn-arrow-label-sm {
@@ -188,7 +246,6 @@ body {
 }
 
 .btn-arrow-sm {
-    /*content: "";*/
     width: 10px;
     height: 10px;
     position: absolute;
@@ -200,7 +257,6 @@ body {
     border-right: 2px solid #fff;
     background-color: transparent;
     transform: rotate(45deg);
-    /*cursor: pointer;*/
     transition: left .3s, transform .3s;
 }
 
@@ -208,41 +264,59 @@ body {
     content: "\f192";   
     font-family: FontAwesome;
     color: #fff;
-    /*cursor: pointer;*/
     font-size: 2rem;
     right: 15px;
     top: 0;
     position: absolute;
 }
 
+#btn-account-info:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block;
+}
+
+#btn-account-info:checked + .btn-arrow-label-sm > 
+.btn-arrow-sm {
+    transform: rotate(135deg);
+}
+
+#btn-account-info:checked + .btn-arrow-label-sm {
+    font-weight: 400;
+}
+
+#btn-settings:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block;
+}
+
+#btn-settings:checked + .btn-arrow-label-sm > 
+.btn-arrow-sm {
+    transform: rotate(135deg);
+}
+
+#btn-settings:checked + .btn-arrow-label-sm {
+    font-weight: 400;
+}
+
+/************************
+***** 3. Main part ******
+************************/
+
 .main-part {
-    /*max-width: 100%;*/
     width: 60vw;
-    /*transition: width .6s;*/
     min-height: 100vh;
     background-color:#fff;
 }
 
 .main-part__logo {
-    /*text-align: center;*/
     font-size: 0;
     height: 96px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-top: 16px;
-    box-sizing: border-box;*/
 }
-
-/*.avatar-wrapper--right-margined {
-    margin-right: 32px;
-}*/
-
 
 .messages {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
 }
 
 .user-message {
@@ -250,9 +324,7 @@ body {
     margin-bottom: 24px;
     margin-left: 48px;
     display: flex;
-    /*width: 50%;*/
     justify-content: flex-start;
-    
 }
 
 .user-message:first-child {
@@ -265,12 +337,8 @@ body {
 
 .user-message-wrapper {
     align-items: flex-end;
-     /*width: initial;*/
     display: flex;
     max-width: 50%;
-    /*align-items: flex-end;*/
-    /*position: relative;*/
-    /*justify-content:flex-start;*/
     position: relative;
 }
 
@@ -279,12 +347,9 @@ body {
     padding: 16px 24px;
     line-height: 150%;
     color: #fff; 
-    /*width: 100%;*/
-    /*width: 20vw;*/
     background-color: #989AD7;
     border-radius: 10px;
 }
-
 
 .user-message-wrapper__publication-date {
     position: absolute;
@@ -300,17 +365,12 @@ body {
 }
 
 .user-message:nth-child(odd) > .user-message-wrapper > .avatar-wrapper {
-   
     margin-right: 32px;
-    /*margin-right: 48px;*/
-
 }
 
 .user-message:nth-child(even) > .user-message-wrapper > .avatar-wrapper {
     order: 1;
     margin-left: 32px;
-    /*margin-right: 48px;*/
-
 }
 
 .user-message:nth-child(even) > .user-message-wrapper > .user-message-wrapper__publication-date {
@@ -325,29 +385,12 @@ body {
 .message-input {
     margin: 24px auto 0;
     max-width: calc((100% - 96px - 120px - 64px));
-    /*text-align: center;*/
-    /*width: 77%;*/
     background-color: #EDEDFA;
     border-radius: 15px;
     min-height: 32px;
-    /*display: inline-flex;
-    align-items: center;*/
     padding: 7px 16px ;
     box-sizing: border-box;
 }
-
-/*.message-input__item {
-    height: 32px;
-    line-height: 32px;
-    border: none;
-    background: transparent;
-    display: block;
-    width: 100%;;
-    padding: 0 32px 0 16px;
-    font-size: 1.4rem;
-    color: grey;
-    position: relative;
-}*/
 
 .message-input__item:after {
     content: "\f118";   
