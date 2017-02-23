@@ -1,0 +1,109 @@
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part {
+    /*background-color: green;*/
+    width: 124px;
+    /*transition: width .3s;*/
+}
+
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part + .main-part {
+    /*background-color: green;*/
+    width: calc(100vw - 14px);
+    /*transition: width .3s;*/
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) 
++ .aside-part > .aside-part__users-info > 
+.user-info > .user-info__description {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__users-info > 
+.user-info > .user-info__last-time {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .search-user {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .btn-bars-label {
+    display: none;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__header > .btn-arrow-label {
+    transform: rotate(-225deg);
+    left: calc((60px - 20px)/2);
+    transition: all .3s;
+}
+
+
+
+
+
+#btn-bars:checked + .aside-part > .aside-part__users-info {
+    /*background-color: green;*/
+    display: none;
+}
+
+.aside-part__user-menu {
+    display: none;
+}
+
+#btn-bars:checked + .aside-part > .aside-part__header >
+ .btn-bars-label:after {
+    content: "\f00d";   
+    font-family: FontAwesome;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.6rem;
+    left: 0;
+}
+
+#btn-bars:checked + .aside-part > .aside-part__user-menu {
+    display: block;
+}
+
+
+#btn-arrow ~ #btn-bars:checked + .aside-part > 
+.aside-part__header > .btn-arrow-label{
+    cursor: default;
+    pointer-events: none;
+}
+
+/*#btn-arrow:checked + input + .aside-part > .aside-part__users-info > .user-info__description {
+    display: none;
+}*/
+
+
+
+#btn-account-info:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block;
+}
+
+#btn-account-info:checked + .btn-arrow-label-sm > 
+.btn-arrow-sm {
+    transform: rotate(135deg);
+}
+
+#btn-account-info:checked + .btn-arrow-label-sm {
+    font-weight: 400;
+}
+
+
+
+#btn-settings:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block;
+}
+
+#btn-settings:checked + .btn-arrow-label-sm > 
+.btn-arrow-sm {
+    transform: rotate(135deg);
+}
+
+#btn-settings:checked + .btn-arrow-label-sm {
+    font-weight: 400;
+}
