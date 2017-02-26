@@ -14,11 +14,13 @@ body {
     font-weight: 300;
     font-size: 1.4rem;
     background: #b4b4b4;
-    height: 100vh;
 }
 
 .wrapper {
     display: flex;
+    max-width: 1366px;
+    max-height: 100vh;
+    margin: 0 auto;
 }
 
 
@@ -35,7 +37,9 @@ body {
 
 .aside-part {
     width: 40vw;
+    min-width: 124px;
     min-height: 100vh;
+    overflow: auto;
     background-color: #3B3E99;
     display: flex;
     flex-direction: column;
@@ -45,7 +49,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
     margin-top: 16px;
     padding: 0 32px;
 }
@@ -88,20 +92,23 @@ body {
     transition: left .3s, transform .3s;
 }
 
-.btn-bars-label:after {
-    content: "\f0c9";   
-    font-family: FontAwesome;
-    color: #fff;
-    cursor: pointer;
-    font-size: 2.6rem;    
+ #btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__users-info > .user-info {
+        padding: 0;
+        justify-content: center;
 }
 
+#btn-arrow:checked + #btn-bars:not(:checked) + 
+.aside-part > .aside-part__users-info > .user-info  > .avatar-wrapper {
+    margin-right: 0;
+}
 
 #btn-arrow:checked + #btn-bars:not(:checked) + .aside-part {
     width: 124px;
 }
 
-#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part + .main-part {
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part +
+.main-part {
     width: calc(100vw - 14px);
 }
 
@@ -130,17 +137,24 @@ body {
 #btn-arrow:checked + #btn-bars:not(:checked) + 
 .aside-part > .aside-part__header > .btn-arrow-label {
     transform: rotate(-225deg);
-    left: calc((60px - 20px)/2);
+    left: calc((100% - 16px)/2);
     transition: all .3s;
 }
 
+.btn-bars-label:after {
+    content: "\f0c9";   
+    font-family: FontAwesome;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.6rem;    
+}
 
 #btn-bars:checked + .aside-part > .aside-part__users-info {
     display: none;
 }
 
 #btn-bars:checked + .aside-part > .aside-part__header >
- .btn-bars-label:after {
+.btn-bars-label:after {
     content: "\f00d";   
     font-family: FontAwesome;
     color: #fff;
@@ -168,9 +182,14 @@ body {
     margin-top: 30px;
 }
 
+.user-info:last-child {
+    margin-bottom: 32px;
+}
+
 .avatar-wrapper {
     font-size: 0;  
-    width: 60px;  
+    width: 60px;
+    margin-right: 16px;  
 }
 
 .avatar__img {
@@ -178,7 +197,7 @@ body {
 }
 
 .user-info__description {
-    height: 38px;
+    height: 32px;
     margin-left: -20px;;
 }
 
@@ -304,6 +323,7 @@ body {
     width: 60vw;
     min-height: 100vh;
     background-color:#fff;
+    overflow-y: auto;
 }
 
 .main-part__logo {
@@ -322,7 +342,6 @@ body {
 .user-message {
     margin-top: 24px;
     margin-bottom: 24px;
-    margin-left: 48px;
     display: flex;
     justify-content: flex-start;
 }
@@ -336,6 +355,8 @@ body {
 }
 
 .user-message-wrapper {
+    margin-right: 48px;
+    margin-left: 48px;
     align-items: flex-end;
     display: flex;
     max-width: 50%;
@@ -362,6 +383,7 @@ body {
 
 .user-message:nth-child(even) > .user-message-wrapper {
     margin-right: 48px;
+     margin-left: 48px;
 }
 
 .user-message:nth-child(odd) > .user-message-wrapper > .avatar-wrapper {
@@ -371,6 +393,7 @@ body {
 .user-message:nth-child(even) > .user-message-wrapper > .avatar-wrapper {
     order: 1;
     margin-left: 32px;
+    margin-right: 0;
 }
 
 .user-message:nth-child(even) > .user-message-wrapper > .user-message-wrapper__publication-date {
@@ -383,16 +406,18 @@ body {
 }
 
 .message-input {
-    margin: 24px auto 0;
-    max-width: calc((100% - 96px - 120px - 64px));
+    margin: 24px auto 30px;
+    width: calc((100% - 96px - 120px - 64px));
     background-color: #EDEDFA;
     border-radius: 15px;
     min-height: 32px;
     padding: 7px 16px ;
     box-sizing: border-box;
+    position: relative;
+    margin-bottom: 32px;
 }
 
-.message-input__item:after {
+.message-input:after {
     content: "\f118";   
     background-color: none;
     font-family: FontAwesome;

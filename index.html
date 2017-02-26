@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chat Application</title>
      <!--Vendor Links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -12,7 +13,7 @@
 
     <!--Main styles-->
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="main2.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -97,7 +98,7 @@
                     </div>
                 </div>  <!--end user-info-->
 
-                 <div class="user-info">
+                 <div class="user-info user-info--active">
                     
                     <div class="avatar-wrapper">
                         <img class="avatar__img" src="http://placehold.it/60x60" alt="">
@@ -143,38 +144,11 @@
                     <div class="user-info__last-time">
                         2 h
                     </div>
-                </div>  <!--end user-info-->
+                </div>   <!--end user-info-->
 
-                 <div class="user-info">
-                    
-                    <div class="avatar-wrapper">
-                        <img class="avatar__img" src="http://placehold.it/60x60" alt="">
-                    </div>
 
-                    <div class="user-info__description">
-                        <h4 class="user-info__heading">Marta Chen</h4>
-                        <p class="user-info__text">Contrary to popular belief, Lorem Ipsum of the</p>
-                    </div>
-
-                    <div class="user-info__last-time">
-                        2 h
-                    </div>
-                </div>  <!--end user-info-->
-                 <div class="user-info">
-                    
-                    <div class="avatar-wrapper">
-                        <img class="avatar__img" src="http://placehold.it/60x60" alt="">
-                    </div>
-
-                    <div class="user-info__description">
-                        <h4 class="user-info__heading">Marta Chen</h4>
-                        <p class="user-info__text">Contrary to popular belief, Lorem Ipsum of the</p>
-                    </div>
-
-                    <div class="user-info__last-time">
-                        2 h
-                    </div>
-                </div>  <!--end user-info-->
+                
+                
               
             </div>   <!--end aside-part__users-info-->
 
@@ -185,7 +159,7 @@
                     <div class="user-menu__item">
                         <input type="checkbox" id="btn-account-info">
                         <label for="btn-account-info" class="btn-arrow-label-sm">
-                            Account Information
+                            Account Settings
                             <span class="btn-arrow-sm"></span>
                         </label>
                         <div class="user-menu__item-info">
@@ -275,7 +249,7 @@
                         </div>
 
                         <div class="user-message-wrapper__publication-date">
-                            12:33
+                            12:34
                         </div>
                     </div>                    
                 </div>  <!--end user-message-->
@@ -292,16 +266,17 @@
                         </div>
 
                         <div class="user-message-wrapper__publication-date">
-                            12:33
+                            12:35
                         </div>
                     </div>                    
                 </div>  <!--end user-message-->
-
+                
+                 <div class="message-input" contenteditable="true">
+                    Type Something...
+                </div>
             </div>  <!--end messages-->
 
-            <div class="message-input" contenteditable="true">
-                Type Something...
-            </div>
+           
 
         </main>  <!--end main-part-->
     </div>  <!--end wrapper-->
