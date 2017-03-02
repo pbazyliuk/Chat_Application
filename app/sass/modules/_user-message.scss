@@ -2,6 +2,12 @@
 // User-message Styles
 // ==========================================================================
 
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .user-message {
     display: flex;
     justify-content: flex-start;
@@ -77,5 +83,4 @@
         position: absolute;
         right: 10px;
     }
-
 }

@@ -17,12 +17,9 @@
         @include mq(medium) {
             position: absolute;
             right: 32px;
-            top: -51px;
+            top: -47px;
         }
-
-
     }
-
 }
 
 #btn-bars:checked + .aside-part > .aside-part__users-info {
@@ -34,7 +31,7 @@
     content: "\f00d";
     cursor: pointer;
     font-family: FontAwesome;
-    font-size: calculateRem($big__font-size);
+    font-size: calculateRem(26px);
     left: 0;
 
     @include mq(medium) {

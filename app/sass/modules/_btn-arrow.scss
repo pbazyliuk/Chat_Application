@@ -3,15 +3,12 @@
 // ==========================================================================
 
 .btn-arrow {
-    border-right: 2px solid $white;
-    border-top: 2px solid $white;
+    @extend %arrow-icon;
     cursor: pointer;
     height: 12px;
     left: 2px;
-    padding: 0;
     position: relative;
     transform: rotate(-135deg);
-    transition: transform .3s;
     width: 12px;
 
     @include mq(small) {

@@ -24,7 +24,7 @@
             content: "\f002";
             cursor: pointer;
             font-family: FontAwesome;
-            font-size: 1.6rem;
+            font-size: calculateRem(16px);
             position: absolute;
             right: 15px;
             top: 6px;
@@ -60,6 +60,5 @@
             width: 15vw;
         }
     }
-  
 }
 

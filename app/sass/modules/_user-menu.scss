@@ -6,10 +6,10 @@
     display: flex;
     flex-direction: column;
 
-        @include e(item-info) {
-            background: #fff;
-            display: none;
-            margin-bottom: 22px;
-            padding: 32px;
-        }   
+    @include e(item-info) {
+        background: #fff;
+        display: none;
+        margin-bottom: 22px;
+        padding: 32px;
+    }   
 }

@@ -54,7 +54,7 @@
     
     @include e(text) {
         color: $cold_purple;
-        font-size: calculateRem($base__font-size)/$base__line;
+        font: calculateRem(14px)/20px;
         margin-top: 5px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -79,8 +79,6 @@
             min-width: 190px;
             width: 21vw;
         }
-
-
     }
 
     @include e(last-time) {

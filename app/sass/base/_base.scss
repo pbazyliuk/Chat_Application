@@ -7,10 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background: $grey;
-    // font-family: $font-family--primary;
-    // font-size: calculateRem($base__font-size);
-    // font-weight: $font-weight--light;
-    font: $font-weight--light calculateRem($base__font-size)/$base__line $font-family--primary;
+    font: $font-weight--light calculateRem($base__font-size)/$base__line $font-family--primary;// 300 14px/20px 'open sans'
 }
 
 input:focus, [contenteditable="true"] {
