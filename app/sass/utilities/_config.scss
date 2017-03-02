@@ -1,0 +1,55 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic,cyrillic-ext';
+$font-family--primary    : "Open Sans", "Arial", sans-serif;
+
+
+// Font Weights
+
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--semibold   : 600;
+$font-weight--bold       : 700;
+
+
+// Descriptive Base Colors
+
+$white    : #fff;
+$black    : #0b0b0b;
+$grey     : #797e83;
+
+$royal_purple  	: #3B3E99;
+$cold_purple   	: #989AD7;
+$chambray		: #37398D;
+$french_rose    : #F23F79;
+$white_lilac    : #F1F1FB;
+
+
+// Text
+
+$base__font-size : 14px;
+$base__line      : 20px;
+$sm__font-size   : 12px;
+$sm__line   	 : 16px;
+$big__font-size  : 26px;
+$big__line		 : 32px;
+
+
+// Border radius
+
+$br--primary    : 15px;
+$br--secondary  : 10px;
+$br--round      : 50%;
+
+
+//Breakpoints
+
+$brkpoint-x-small  : 0.0625rem; //1px
+$brkpoint-small    : 37.5rem;   //600px
+$brkpoint-medium   : 50rem;     //800px
+$brkpoint-large    : 60rem;     //960px
+$brkpoint-x-large  : 80rem;     //1280px

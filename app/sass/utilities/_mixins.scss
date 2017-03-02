@@ -1,0 +1,46 @@
+// BEM selectors
+
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-x-small) and (max-width: $brkpoint-small) {
+      @content;
+    }
+  }
+
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-small + $brkpoint-x-small) and (max-width: $brkpoint-medium) {
+      @content;
+    }
+  }
+
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-medium + $brkpoint-x-small) and (max-width: $brkpoint-large) {
+      @content;
+    }
+  }
+
+   @else if $break == "x-large" {
+    @media (min-width: $brkpoint-large + $brkpoint-x-small) and (max-width: $brkpoint-x-large) {
+      @content;
+    }
+  }
+
+   @else {
+   	@error ("Whoops! No value could be retrieved for `#{$break}`.")
+  }
+}

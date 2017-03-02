@@ -1,0 +1,66 @@
+// ==========================================================================
+// Aside-part Styles
+// ==========================================================================
+
+.aside-part {
+    background-color: $royal_purple;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 124px;
+    overflow: auto;
+    width: 40vw;
+    
+     @include mq(small) {
+        min-height: 100%;
+        min-width: 460px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    @include mq(medium) {
+        min-width: 124px;
+        overflow-y: auto;
+        width: 45vw;
+    }
+
+    @include mq(large) {
+        background-color: #3B3E99;
+        width: 50vw;
+    }
+
+    @include mq(x-large) {
+        width: 45vw;
+    }
+
+    @include e(header) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        min-height: 60px;
+        padding: 0 32px;
+        
+        @include mq(small) {
+            display: flex;
+            margin-top: 32px;
+            padding-right: 32px;
+        }
+
+        @include mq(medium) {
+            display: block;
+            margin-bottom: 16px;
+            margin-top: 74px;
+            min-height: 32px;
+            position: relative;
+        }
+    }
+
+    @include e(user-menu) {
+        display: none;
+        margin-bottom: 32px;
+        margin-top: 32px;
+        padding: 0 32px;
+    }
+}
+

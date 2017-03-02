@@ -1,0 +1,47 @@
+// ==========================================================================
+// Btn-bars Styles
+// ==========================================================================
+
+.btn-bars {
+    &:after {
+        color: $white; 
+        content: "\f0c9";
+        cursor: pointer;
+        font-family: FontAwesome;
+        font-size: calculateRem(26px);
+        
+        @include mq(small) {
+            font-size: calculateRem(30px);
+        }
+
+        @include mq(medium) {
+            position: absolute;
+            right: 32px;
+            top: -51px;
+        }
+
+
+    }
+
+}
+
+#btn-bars:checked + .aside-part > .aside-part__users-info {
+    display: none;
+}
+
+#btn-bars:checked + .aside-part > .aside-part__header > .btn-bars:after {
+    color: $white;  
+    content: "\f00d";
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: calculateRem($big__font-size);
+    left: 0;
+
+    @include mq(medium) {
+        left: inherit;
+    }
+}
+
+#btn-bars:checked + .aside-part > .aside-part__user-menu {
+    display: block;
+}

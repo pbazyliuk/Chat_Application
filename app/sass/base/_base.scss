@@ -1,0 +1,27 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+
+body {  
+    margin: 0;
+    padding: 0;
+    background: $grey;
+    // font-family: $font-family--primary;
+    // font-size: calculateRem($base__font-size);
+    // font-weight: $font-weight--light;
+    font: $font-weight--light calculateRem($base__font-size)/$base__line $font-family--primary;
+}
+
+input:focus, [contenteditable="true"] {
+    outline: none;
+}
+
+
+// ==========================================================================
+// Disable input checkbox elements show
+// ==========================================================================
+
+#btn-arrow, #btn-bars, #btn-account-info, #btn-settings {
+    display: none;
+}

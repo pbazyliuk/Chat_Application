@@ -1,0 +1,81 @@
+// ==========================================================================
+// User-message Styles
+// ==========================================================================
+
+.user-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    &:first-child {
+        margin-top: 10px;
+    }
+
+    &:nth-child(even) {
+        justify-content: flex-end;
+    }
+
+    &:nth-child(even) > .user-message-wrapper {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    &:nth-child(even) > .user-message-wrapper > .avatar-wrapper {
+        margin-left: 32px;
+        margin-right: 0;
+        order: 1;
+    }
+
+    &:nth-child(even) > .user-message-wrapper > .user-message-wrapper__publication-date {
+        left: 10px;
+    }
+
+    &:nth-child(even) > .user-message-wrapper > .user-message-wrapper__text {
+        background-color: $white_lilac;
+        color: $black;
+    }
+
+    &:nth-child(odd) > .user-message-wrapper > .avatar-wrapper {
+        margin-right: 32px;
+    }
+}
+
+.user-message-wrapper {
+    align-items: flex-end;
+    display: flex;
+    margin-left: 48px;
+    margin-right: 48px;
+    max-width: 50%;
+    position: relative;
+
+    @include mq(small) {
+        max-width: 88%; 
+    }
+
+    @include mq(medium) {
+        max-width: 88%;
+    }
+
+    @include mq(large) {
+        max-width: 78%;
+    }
+
+    @include e(text) {
+        background-color: $cold_purple;
+        border-radius: $br--secondary;
+        color: $white;
+        line-height: 150%;
+        padding: 16px 24px;
+    }
+
+    @include e(publication-date) {
+        bottom: -24px;
+        color: $grey;
+        font-size: calculateRem(12px);
+        font-weight: $font-weight--medium;
+        position: absolute;
+        right: 10px;
+    }
+
+}

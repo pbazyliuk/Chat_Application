@@ -1,0 +1,15 @@
+// ==========================================================================
+// Btn-settings Styles
+// ==========================================================================
+
+#btn-settings:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block;
+}
+
+#btn-settings:checked + .btn-arrow-label-sm > .btn-arrow-sm {
+    transform: rotate(135deg);
+}
+
+#btn-settings:checked + .btn-arrow-label-sm {
+    font-weight: $font-weight--medium;
+}

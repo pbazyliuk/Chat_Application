@@ -1,0 +1,16 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// Import if Google Fonts URL is defined
+
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Calculate rem values
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize+rem;
+}

@@ -1,0 +1,13 @@
+// ==========================================================================
+// Btn-logout Styles
+// ==========================================================================
+
+.btn-logout:after {
+    color: $white;
+    content: "\f192";
+    font-family: FontAwesome;
+    font-size: calculateRem(20px);
+    position: absolute;
+    right: 15px;
+    top: 0;
+}

@@ -1,0 +1,126 @@
+// ==========================================================================
+// Btn-arrow Styles
+// ==========================================================================
+
+.btn-arrow {
+    border-right: 2px solid $white;
+    border-top: 2px solid $white;
+    cursor: pointer;
+    height: 12px;
+    left: 2px;
+    padding: 0;
+    position: relative;
+    transform: rotate(-135deg);
+    transition: transform .3s;
+    width: 12px;
+
+    @include mq(small) {
+        height: 16px;
+        width: 16px;
+    }
+
+    @include mq(medium) {
+        left: 32px;
+        position: absolute;
+        top: -44px;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__users-info > .user-info {
+    justify-content: center;
+    padding: 0;
+
+    @include mq(small) {
+         display: none;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__users-info {
+        
+        @include mq(large) {
+            margin-top: 35px;
+        }
+    }
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__users-info > .user-info > .avatar-wrapper {
+    margin-right: 0;
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part {
+    width: 124px;
+
+    @include mq(small) {
+        min-height: 20vh;
+        width: 100%;
+    }
+
+    @include mq(medium) {
+       padding: 0;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__header {
+        @include mq(medium) {
+            margin-bottom: 0;
+            min-height: 0;
+        }
+
+        @include mq(large) {
+            margin-bottom: 0;
+            margin-top: 38px;
+            min-height: 0;
+        }
+
+
+    }
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part + .main-part {
+    width: calc(100vw - 14px);
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__users-info > .user-info > .user-info__description {
+    display: none;
+
+    @include mq(small) {
+         display: block;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__users-info > .user-info > .user-info__last-time {
+    display: none;
+
+    @include mq(small) {
+         display: block;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__header > .search-user {
+    display: none;
+
+    @include mq(small) {
+         display: block;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__header > .btn-bars {
+    display: none;
+
+    @include mq(small) {
+         display: block;
+    }
+}
+
+#btn-arrow:checked + #btn-bars:not(:checked) + .aside-part > .aside-part__header > .btn-arrow {
+    left: calc((100% - 16px)/2);
+    transform: rotate(-225deg);
+    transition: all .3s;
+
+    @include mq(small) {
+         left: 2px;
+    }
+}
+
+#btn-arrow ~ #btn-bars:checked + .aside-part > .aside-part__header > .btn-arrow {
+    cursor: default;
+    pointer-events: none;
+}

@@ -1,0 +1,51 @@
+// ==========================================================================
+// Btn-account-info Styles
+// ==========================================================================
+ 
+ .btn-arrow-sm {
+     border-right: 2px solid $white;
+     border-top: 2px solid $white;
+     height: 10px;
+     padding: 0;
+     position: absolute;
+     right: 17px;
+     top: calc((45px - 17px + 4px)/2);
+     transform: rotate(45deg);
+     transition: transform .3s;
+     width: 10px;
+
+     @include mq(medium) {
+         font-size: calculateRem($base__font-size);
+     }
+  }
+
+.btn-arrow-label-sm {
+     background: $cold_purple;
+     color: $white;
+     cursor: pointer;
+     display: block;
+     font: calculateRem(16px);   
+     height: 45px;
+     line-height: 45px;
+     margin-top: 10px;
+     position: relative;
+     text-align: center;
+  }
+
+#btn-account-info:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block; }
+
+#btn-account-info:checked + .btn-arrow-label-sm > .btn-arrow-sm {
+    transform: rotate(135deg); }
+
+#btn-account-info:checked + .btn-arrow-label-sm {
+    font-weight: $font-weight--medium; }
+
+#btn-settings:checked + .btn-arrow-label-sm + .user-menu__item-info {
+    display: block; }
+
+#btn-settings:checked + .btn-arrow-label-sm > .btn-arrow-sm {
+    transform: rotate(135deg); }
+
+#btn-settings:checked + .btn-arrow-label-sm {
+    font-weight: $font-weight--medium; }

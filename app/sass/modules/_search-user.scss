@@ -1,0 +1,65 @@
+// ==========================================================================
+// Search-user Styles
+// ==========================================================================
+
+.search-user {
+    &:after {
+        background-color: none;
+        color: $white;
+        content: "\f002";
+        cursor: pointer;
+        font-family: FontAwesome;
+        font-size: calculateRem(16px);
+        left: -32px;
+        position: relative;
+
+        @include mq(medium) {
+            content: "";
+        }
+    
+    &:before {
+        @include mq(medium) {
+            background-color: none;
+            color: #fff;
+            content: "\f002";
+            cursor: pointer;
+            font-family: FontAwesome;
+            font-size: 1.6rem;
+            position: absolute;
+            right: 15px;
+            top: 6px;
+        }
+    }
+}
+
+    @include e(field) {
+        background-color: $white_lilac;
+        border: none;
+        border-radius: $br--primary ;
+        height: 32px;
+        padding: 0 35px 0 15px;
+
+        @include mq(small) {
+            border-radius: 20px;
+            box-sizing: border-box;
+            font-size: calculateRem(16px);
+            height: 45px;
+            min-width: 220px;
+            padding: 3px 35px 2px 15px;
+            width: 45vw;
+        }
+
+        @include mq(medium) {
+            box-sizing: border-box;
+            padding: 0 16px;
+            width: 100%;
+        }
+
+        @include mq(x-large) {
+            min-width: 16vw;
+            width: 15vw;
+        }
+    }
+  
+}
+

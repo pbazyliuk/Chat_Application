@@ -1,4 +1,4 @@
-@media only screen and (max-width: 38rem) {
+@media only screen and (max-width: 37.5rem) { /*600px*/
     
     .wrapper {
         flex-direction: column;
@@ -106,7 +106,8 @@
     }
 }
 
-@media only screen and (max-width: 50rem) and (min-width: 38rem) {
+@media only screen and (max-width: 50rem) and (min-width: 37.625rem) {  /*max - 800px//min - 601px*/
+   
     
     .aside-part {
         min-width: 124px;
@@ -214,7 +215,7 @@
     
 }
 
-@media only screen and (max-width: 60rem) and (min-width: 50rem) {
+@media only screen and (max-width: 60rem) and (min-width: 50.0625rem) {     /*max - 960px//min - 801px*/
     
     .aside-part {
         background-color: #3B3E99;
@@ -250,7 +251,7 @@
 
 }
 
-@media only screen and (max-width: 79rem) and (min-width: 60rem) {
+@media only screen and (max-width: 80rem) and (min-width: 60.0625rem) {   /*max - 1280px//min - 961px*/
     
     .aside-part {
         width: 45vw;

@@ -1,0 +1,23 @@
+{
+  "name": "chat-application",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "pavlo bazyliuk"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "normalize-css": "^5.0.0"
+  },
+  "private": true
+}

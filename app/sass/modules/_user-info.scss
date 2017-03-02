@@ -1,0 +1,100 @@
+// ==========================================================================
+// User-info Styles
+// ==========================================================================
+
+.user-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 32px;
+
+    &:last-child {
+        margin-bottom: 32px;
+
+        
+        @include mq(small) {
+            margin-bottom: 32px;
+        }
+    }
+
+    @include mq(medium) {
+        justify-content: flex-start;
+    }
+
+
+    @include e(description) {
+        height: 44px;
+        margin-left: -20px;
+
+        @include mq(medium) {
+            display: flex;
+            height: 60px;
+            margin-left: 0;
+            margin-left: 32px;
+        }
+    }
+
+    @include e(heading) {
+        color: $white;
+        font-size: calculateRem($base__font-size);
+        font-weight: $font-weight--medium;
+        margin: 0;
+        padding: 0;
+
+         @include mq(small) {
+             font-size: calculateRem(16px);
+         }
+
+        @include mq(medium) {
+            align-self: center;
+            line-height: 145%;
+         }
+    }
+    
+    @include e(text) {
+        color: $cold_purple;
+        font-size: calculateRem($base__font-size)/$base__line;
+        margin-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 280px;
+
+        @include mq(small) {
+            min-width: 200px;
+            width: 50vw;
+        }
+
+        @include mq(medium) {
+            display: none;
+        }
+
+        @include mq(large) {
+            min-width: 180px;
+            width: 10vw;
+        }
+
+        @include mq(x-large) {
+            min-width: 190px;
+            width: 21vw;
+        }
+
+
+    }
+
+    @include e(last-time) {
+        background: $chambray;
+        border-radius: $br--secondary;
+        color: $cold_purple;
+        font-size: calculateRem(12px);
+        padding: 3px 0;
+        text-align: center;
+        width: 50px;
+
+         @include mq(medium) {
+            display: none;
+        }
+    }
+}
+

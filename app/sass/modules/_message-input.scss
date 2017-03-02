@@ -1,0 +1,44 @@
+// ==========================================================================
+// Message-input Styles
+// ==========================================================================
+
+.message-input {
+    background-color: $white_lilac;
+    border-radius: $br--primary;
+    box-sizing: border-box;
+    margin: 24px auto 30px;
+    margin-bottom: 32px;
+    min-height: 32px;
+    padding: 7px 16px;
+    position: relative;
+    width: calc((100% - 96px - 120px - 64px));
+
+    @include mq(small) {
+        border-radius: 20px;
+        box-sizing: border-box;
+        font-size: calculateRem(16px);
+        line-height: 150%;
+        min-height: 45px;
+        padding: 10px 35px 10px 20px;
+        width: calc((100% - 96px));
+    }
+
+    @include mq(medium) {
+        width: calc((100% - 96px));
+    }
+
+    @include mq(large) {
+        width: calc((100% - 96px));
+    }
+}
+
+.message-input:after {
+    background-color: none;
+    color: $grey;
+    content: "\f118";
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: calculateRem(16px);
+    position: absolute;
+    right: 16px;
+}
